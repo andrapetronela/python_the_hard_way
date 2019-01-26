@@ -1,0 +1,25 @@
+#import modules
+from sys import argv
+from os.path import exists
+
+# exists returns True if the file exists / False otherwise
+
+#define arguments
+script, from_file, to_file = argv
+
+print(f"Copying from {from_file} to {to_file}")
+
+indata = open(from_file).read()
+
+print(f"The input file is {len(indata)} bytes long.")
+
+print(f"Does the output file exist? {exists(to_file)}")
+print("Ready, hit Return to continue, CTRL-C to abort.")
+input()
+
+out_file = open(to_file, 'w')
+out_file.write(indata)
+
+print('Alright, all done.')
+
+out_file.close()
