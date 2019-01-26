@@ -25,5 +25,8 @@ script, filename = argv
 #line3 = input('line 3: ')
 #
 #txt.write(line1)
+#txt.write('\n')
 #txt.write(line2)
+#txt.write('\n')
 #txt.write(line3)
+#txt.write('\n')
